@@ -5,9 +5,9 @@ export default {
     extend: {
       colors: {
         brand: {
-          DEFAULT: "#00aeef", // brand blue 700
-          light: "#3b82f6", // blue 500
-          dark: "#1e3a8a", // blue 800
+          DEFAULT: "#00aeef", // brand
+          light: "#3b82f6",
+          dark: "#1e3a8a",
         },
       },
       boxShadow: {

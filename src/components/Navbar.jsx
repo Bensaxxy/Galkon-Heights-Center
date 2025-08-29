@@ -15,7 +15,9 @@ export default function Navbar() {
       <div className="container-page flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
           <img src="/logo.png" width={45} />
-          <span className="font-semibold text-lg">Galkon Heights</span>
+          <span className="font-semibold text-md lg:text-lg xl:xl 2xl:text-2xl">
+            Galkon Heights
+          </span>
         </Link>
         <button
           onClick={() => setOpen((v) => !v)}

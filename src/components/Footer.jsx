@@ -5,7 +5,7 @@ export default function Footer() {
         <div>
           <div className=" flex items-center gap-2">
             <img src="/logo.png" width={25} />
-            <h4 className="font-semibold mb-2">Galkon Height Center</h4>
+            <h4 className="font-semibold mb-2">Galkon Heights Center</h4>
           </div>
           <p className="text-gray-600">
             Printing • Photocopy • Laminating • Binding • Letterheads • Training

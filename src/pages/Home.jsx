@@ -19,8 +19,8 @@ export default function Home() {
               <Link to="/request" className="btn-primary">
                 Make a Request
               </Link>
-              <Link to="/services" className="btn-ghost">
-                Explore Services
+              <Link to="/training" className="btn-ghost">
+                Want to Training?
               </Link>
             </div>
           </div>

@@ -1,5 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion, AnimatePresence } from "framer-motion";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -10,6 +12,7 @@ const nav = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+
   return (
     <header className="bg-white/90 backdrop-blur sticky top-0 z-40 border-b border-gray-100">
       <div className="container-page flex items-center justify-between h-16">
@@ -19,6 +22,8 @@ export default function Navbar() {
             Galkon Heights
           </span>
         </Link>
+
+        {/* Mobile toggle button */}
         <button
           onClick={() => setOpen((v) => !v)}
           className="sm:hidden btn btn-ghost"
@@ -26,13 +31,9 @@ export default function Navbar() {
         >
           ☰
         </button>
-        <nav
-          className={`sm:flex gap-6 items-center ${
-            open
-              ? "absolute top-16 left-0 w-full bg-white shadow-md flex flex-col p-4"
-              : "hidden"
-          } sm:static sm:w-auto sm:bg-transparent sm:shadow-none`}
-        >
+
+        {/* Desktop nav */}
+        <nav className="hidden sm:flex gap-6 items-center">
           {nav.map((item) => (
             <NavLink
               key={item.to}
@@ -44,7 +45,6 @@ export default function Navbar() {
                     : "text-gray-700 hover:text-brand"
                 }`
               }
-              onClick={() => setOpen(false)}
             >
               {item.label}
             </NavLink>
@@ -53,6 +53,42 @@ export default function Navbar() {
             Start a Request
           </Link>
         </nav>
+
+        {/* Mobile dropdown nav with animation */}
+        <AnimatePresence>
+          {open && (
+            <motion.nav
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: open ? 0 : -100, opacity: open ? 1 : 0 }}
+              transition={{ duration: 0.3 }}
+              className={`sm:flex gap-6 items-center ${
+                open
+                  ? "absolute top-16 left-0 w-full bg-white shadow-md flex flex-col justify-center items-center gap-4 p-6"
+                  : "hidden"
+              } sm:static sm:w-auto sm:bg-transparent sm:shadow-none`}
+            >
+              {nav.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    `px-2 py-1 rounded-lg transition ${
+                      isActive
+                        ? "text-brand font-semibold"
+                        : "text-gray-700 hover:text-brand"
+                    }`
+                  }
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+              <Link to="/request" className="btn-primary hidden sm:inline-flex">
+                Start a Request
+              </Link>
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );

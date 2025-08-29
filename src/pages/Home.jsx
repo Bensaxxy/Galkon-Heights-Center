@@ -20,7 +20,7 @@ export default function Home() {
                 Make a Request
               </Link>
               <Link to="/training" className="btn-ghost">
-                Want to Training?
+                Want to Train?
               </Link>
             </div>
           </div>

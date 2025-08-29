@@ -59,7 +59,7 @@ const Training = () => {
             Duration: <span className="font-medium">3 Months</span>
           </p>
           <p className="text-gray-600 mb-2">
-            Fee: <span className="font-medium">₦50,000</span>
+            Fee: <span className="font-medium">₦80,000</span>
           </p>
           <p className="text-gray-600 mb-6">
             Learn the fundamentals of computer usage, MS Office (Word, Excel,
@@ -80,11 +80,11 @@ const Training = () => {
             Duration: <span className="font-medium">6 Months</span>
           </p>
           <p className="text-gray-600 mb-2">
-            Fee: <span className="font-medium">₦150,000</span>
+            Fee: <span className="font-medium">₦200,000</span>
           </p>
           <p className="text-gray-600 mb-6">
-            Gain advanced knowledge in desktop publishing, graphics design and
-            professional document preparation.
+            Gain advanced knowledge in desktop publishing, graphics design,
+            professional document preparation and introduction to web etc...
           </p>
           <button
             onClick={() => setShowForm("advanced")}
@@ -110,7 +110,7 @@ const Training = () => {
                   e,
                   showForm === "basic" ? "Basic Training" : "Advanced Training",
                   showForm === "basic" ? "3 Months" : "6 Months",
-                  showForm === "basic" ? "₦50,000" : "₦150,000"
+                  showForm === "basic" ? "₦80,000" : "₦200,000"
                 )
               }
               className="space-y-4"

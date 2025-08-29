@@ -75,12 +75,6 @@ const Request = () => {
             <option value="Laminating">Laminating</option>
             <option value="Binding">Binding</option>
             <option value="Letter Head">Letter Head</option>
-            <option value="Basic Training (3 Months)">
-              Basic Training (3 Months)
-            </option>
-            <option value="Advanced Training (6 Months)">
-              Advanced Training (6 Months)
-            </option>
           </select>
         </div>
 

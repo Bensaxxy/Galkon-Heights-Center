@@ -17,7 +17,7 @@ export default function Navbar() {
     <header className="bg-white/90 backdrop-blur sticky top-0 z-40 border-b border-gray-100">
       <div className="container-page flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/logo.png" width={45} />
+          <img src="/logo.png" width={35} />
           <span className="font-semibold text-md lg:text-lg xl:xl 2xl:text-2xl">
             Galkon Heights
           </span>

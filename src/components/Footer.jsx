@@ -3,8 +3,8 @@ export default function Footer() {
     <footer className="mt-10 border-t border-gray-100 bg-white">
       <div className="container-page py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-sm">
         <div>
-          <div className=" flex items-center gap-2">
-            <img src="/logo.png" width={25} />
+          <div className=" flex items-center   gap-2">
+            <img src="/logo.png" width={25} className="mb-2" />
             <h4 className="font-semibold mb-2">Galkon Heights Center</h4>
           </div>
           <p className="text-gray-600">
